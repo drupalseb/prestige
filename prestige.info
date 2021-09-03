@@ -1,0 +1,28 @@
+name = Prestige
+description = Theme for house reseller
+core = 7.x
+engine = phptemplate
+screenshot = screenshot.jpg
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/bootstrap-theme.min.css
+stylesheets[all][] = css/swipebox.css
+
+scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery224.js
+scripts[] = js/jquery.swipebox.js
+scripts[] = js/script.js
+scripts[] = js/maps.js
+
+regions[search_bar] = Search Bar
+regions[help] = Help
+regions[page_top] = Page Top
+regions[home_banner] = Home Banner
+regions[content] = Content
+regions[page_bottom] = Page Bottom
+regions[bottom_one] = First Bottom Column
+regions[bottom_two] = Second Bottom Column
+regions[bottom_three] = Third Bottom Column
+regions[bottom_four] = Fourth Bottom Column
+regions[footer] = Footer
+

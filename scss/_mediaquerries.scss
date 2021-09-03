@@ -1,0 +1,59 @@
+// -------------querry for phones max device-width  768px---------
+@media screen 
+    and (max-width: 768px)
+    and (max-device-width: 768px)
+    and (orientation:portrait){
+        body {
+            font-size: 18px!important;
+        }  
+    }
+    
+//--------------querry for tablets and phones max device width 1024px-----
+@media screen
+    and (min-width:769px)
+    and (max-width:1024px)
+    and (max-device-width: 1024px)
+    and (orientation:landscape){
+        body {
+            font-size: 16px!important;
+        }  
+    }
+    
+@media screen
+and (max-width: 1024px) {
+    .region-home-banner {
+        .main-slogan {
+            left: 13%;
+            top: 15vh;
+            min-width: 400px;
+            h1 {
+                white-space: normal;
+            }
+        }
+        #block-menu-menu-menu-na-g-wnej {
+            position: absolute;
+            top: 60vh;
+            left: 10%;
+            width: 70%;
+         }
+    }
+}
+@media screen
+and (max-width: 1280px) {
+    .region-home-banner {
+        .main-slogan {
+            left: 15%;
+            top: 15vh;
+            min-width: 400px;
+            h1 {
+                white-space: normal;
+            }
+        }
+        #block-menu-menu-menu-na-g-wnej {
+            position: absolute;
+            top: 50vh;
+            left: 15%;
+            width: 58%;
+        }
+    }
+}

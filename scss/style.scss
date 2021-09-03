@@ -1,0 +1,561 @@
+
+/* 
+    Created on : 2016-08-18, 09:51:38
+    Author     : sixamdesign.com
+*/
+@import 'colors';
+@import 'search-bar';
+
+
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: $gray-text;
+}
+li {
+    list-style: none;
+}
+a {
+    color: $gray-text;
+    text-decoration: none;
+}
+a:hover, a:active, a:focus {
+   color:darken($gray-text, 20%);
+}
+
+nav {
+    position: relative;
+    z-index: 5;
+}
+#logo {
+    background-color:$dark-background;
+    padding: 20px;
+    margin-right: -15px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.searchbar-section {
+    z-index: 5;
+    padding-left: 0px!important;
+}
+.main-section {
+    padding-right: 0px;
+    
+    z-index: 3;
+    box-shadow: -5px 0px 7px -3px $light-border inset;
+    h2 {
+        border-bottom: 2px solid $light-border;
+        display: inline-block;
+        width: 50%;
+        padding-bottom: 20px;
+        font-size: 1em;
+        margin-left: 30px;
+        font-weight: 600;
+    }
+}
+ ul#main-menu {
+    padding-top: 20px;
+    
+        padding-left: 0px;
+        &>li {
+            padding: 3px 0;
+            text-transform: uppercase;
+                color: $black;
+            &>a {
+                text-transform: uppercase;
+                color: $black;
+                padding-left: 30px;
+                &:hover, &.active, &:focus {
+                    padding-left: 0px;
+                &:before {
+                    display: inline-block;
+                    content: "";
+                    width: 20px;
+                    border-bottom: 1px solid $red;
+                    vertical-align: middle;
+                    margin-right:10px;
+                    line-height: 2em;
+                }}
+            }
+        }
+    
+}
+#secondary-menu {
+    @extend #main-menu;
+}
+.region-home-banner {
+    position: relative;
+    z-index:1;
+    margin-left: -15px;
+    margin-right: -15px;
+    .main-slogan {
+        font-family: Poppins;   
+        width: 58%;
+        min-width: 500px;
+        margin: 20px auto;
+        position: absolute;
+        top: 30vh;
+        left: 20%;
+        background-color: rgba(255,255,255,0.8);
+        color: $black;
+        text-align: center;
+        padding-bottom: 30px;
+        outline: 1px solid #fff;
+        outline-offset:2px;
+        h1 {
+            font-weight: 300;
+           display: inline-block;
+            border-bottom: 1px solid $black;
+            white-space: nowrap;
+            padding: 8px 40px;
+            margin: 20px 10px;
+        }
+        p {
+            margin: 0;
+            margin-bottom: 0px;
+            padding: 0;
+            line-height: 1.2em;
+        }
+    }
+    .views-field-field-obraz {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+   #block-menu-menu-menu-na-g-wnej {
+       position: absolute;
+       z-index: 10;
+       top: 70vh;
+       left: 20%;
+       width: 57%;
+       ul.menu {
+           list-style: none;
+           display: flex;
+           justify-content:space-between;
+           padding-left: 0px;
+           li {
+               position: relative;    
+               flex-direction: row;
+               list-style: none;
+               text-transform: uppercase;
+               background-color: rgba(255,255,255,0.9);
+               padding: 0;
+               margin: 0;
+               a{
+                   color: $black;
+                   padding: 6px 3px;
+                   display: block;
+                   font-size: 1.2em;
+                   width: 120px;
+                   text-align: center;
+                   vertical-align: middle;
+                   white-space: nowrap;
+                   font-weight: 300;
+               }
+               &:first-child ul {
+                   background: url(../img/icon-flats.png) no-repeat center center; 
+               }
+               &:nth-child(2) ul {
+                   background: url(../img/icon-house.png) no-repeat center center; 
+               }
+               &:nth-child(3) ul {
+                   background: url(../img/icon-parcel.png) no-repeat center center; 
+               }
+               &:nth-child(4) ul {
+                       background: url(../img/icon-other.png) no-repeat center center; 
+                    }
+           }
+           .expanded ul {
+                display: block;
+                position: absolute;
+                top: -110px;
+                
+                width: 100%;
+                height: 100px;
+                left: 0px;
+                padding-top: 10px;
+                transition: background-image 0.2s ease-in-out;
+                -webkit-transition: background-image 0.2s ease-in-out;
+                li {
+                    opacity: 0;  
+                    font-size: 0.9em;
+                    background-color: transparent;
+                    padding: 7px 0;
+                    text-align: center;
+                    transition: opacity 0.2s;
+                     -webkit-transition:opacity 0.2s;
+                     a {
+                         color: $light-text;
+                     }                              
+                }
+                &:hover {
+                    background: url(../img/icon.png) no-repeat center center;
+                    li {
+                        opacity: 1;
+                        display: block;
+                        a:hover {
+                            color: $white;
+                        }
+                    }
+                }
+               
+                &:nth-of-type(2) {
+                    background: url(../img/icon-house.png);
+                }
+                &:nth-of-type(3) {
+                    background: url(../img/icon-parcel.png);
+                }
+                &:nth-of-type(4) {
+                    background: url(../img/icon-other.png);
+                }
+                
+            }
+       }
+   }
+}
+.node-type-oferty {
+    h2 {
+        width: 50%;
+        float: right;
+        padding-left: 15px;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        border-bottom: none;
+        
+    }
+    .group-description {
+        .fieldset-wrapper {
+            line-height: 2em;
+            .field {
+                border-top: 1px solid $light-border;
+                
+            }
+            .field-label {
+                width: 50%;
+                font-weight: 500;
+                border-right: 1px solid $light-border;
+                padding: 8px 0;
+                margin-right: 15px;
+            }
+            .field-items {
+                padding: 8px 0;
+                text-align: justify;
+            }
+            .field-name-body {
+                .field-label {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    .field-name-field-zdjecie-txt {
+        .field-item {
+           box-shadow:1px 1px 5px $gray-border;
+           width: 21%;
+           height: 90px;
+           margin-top: 5px;
+           margin-bottom: 15px;
+           margin-left: 2%;
+           margin-right: 2%;
+           float: left;
+           img {               
+               height:100% ;
+               width: 100%;
+               object-fit:cover;               
+            }
+            &:first-of-type {
+                width:96%;
+                height: 450px;
+            }
+            
+        }
+    }
+}
+.view-oferty  {
+    margin-bottom: 50px;
+    .view-content, .view-filters {
+        margin: 20px 30px;
+    }
+    .views-field-title {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin: 10px 10px 5px 0;
+        
+        span a{
+            display: inline-block;
+            line-height: 1.3em;
+            padding-bottom: 5px;
+            border-bottom: 1px solid $gray-text;
+        }
+    }
+    .views-exposed-form {
+        margin: 0px 30px;
+       
+        .views-widget {
+            display: inline-block;
+        }
+        .views-exposed-widget {
+            input, select, textarea {
+            margin-top: 0px;
+             background-color: #fff;
+             border: 1px solid;
+             border-color: lighten($gray-border, 10%);     
+             -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+             -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+             transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+             &:active, &:focus, &:hover {
+                 border-color: $gray-border;
+                 box-shadow:none;//inset 0 1px 1px rgba(255, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+                 -webkit-box-shadow:none!important;
+                 -moz-box-shadow:none;
+                 outline: none!important; // to odpowaida za wściekły niebieski kolor przy kliknięciu pola input!!!!
+             }
+        }}
+    }
+    .panel-flexible-inside {
+        margin: 30px;
+        overflow: hidden;
+        border: 1px solid $light-text;
+        span {
+            line-height:2em;
+        }
+        .offer-image {
+             position: relative;
+             width: 100%;
+             height: 180px;
+             overflow: hidden;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height:100% ;
+                width: 100%;
+                object-fit:cover;
+                z-index: 10;
+                
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            }
+            span a{
+                @extend img;
+                z-index: 12;
+                color: transparent;
+            }
+        }
+        .offer-price {
+            font-weight: 600;
+        }
+    }
+}
+.main-section .pager li>a {
+    border-radius: 0px;
+}
+
+// --------------classes added in drupal editor!!!--------------
+// ------basic_page - about-us
+.about-us, .contact {
+    p {
+        line-height: 2em;
+    }
+    .row {
+        margin: 15px;
+        margin-bottom: 80px;
+    }
+    h4 {
+        border-bottom: 1px solid $light-border;
+        margin-top: 0px;
+        padding-bottom: 20px;
+        font-size: 1.4em;
+        
+       
+    }
+    img {
+        width: 100%;
+        height: auto;
+        
+    }
+    p {
+        margin: 20px 0;
+    }
+    
+}
+.contact {
+    margin-left: -15px;
+    margin-right: -15px;
+    .map-container {
+        margin: 0 -15px;
+        .row{
+            margin: 0;
+        }
+    }
+}
+.page-bottom {
+   
+    padding-bottom: 20px;
+    min-height: 200px;
+    margin-top: 0px;
+    background-color: $dark-background;
+    color:$light-text;
+    h2 {
+         float: none;
+         padding-left: 0px;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+        margin-left: 0px!important;
+    }
+    ul {
+        margin-top: 0px;
+        padding-left: 0px;
+        
+        li {
+            list-style: none;
+        }
+        a {
+            display: inline-block;
+            color: inherit;
+            margin-top: 5px;
+            &:after {
+                font-family: 'fontawesome';
+                font-size: 0.8em;
+                content: '\f105';
+                margin-left: 5px;
+                
+            }
+            &.active {
+                color: $lightgray-text;
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .region {
+        margin: 30px 10px 20px 20px;
+        position: relative;
+        &:after {
+            height: 170px;
+            border-left: 1px solid $dark-border;
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 0px;
+        }
+    }
+    &>div:last-of-type {
+        padding-left: 0px;
+        .region {
+            margin:30px 0 10px -20px;
+        }
+        .region:after {
+            content: none;
+        }
+    }
+    
+    
+}
+footer {
+   background-color: $dark-background;
+    color:$light-text;
+    padding-bottom: 20px;
+    .region-footer {
+        margin: 0px 30px;
+        padding: 20px 0; 
+        border-top: 1px solid $dark-border;
+        font-size: 0.8em;
+        img {
+            margin-right: 10px;
+        }
+        & div {
+            border-right: 1px solid $dark-border;
+            &:last-of-type {
+                border-right: none;
+                
+            }
+        }
+    }
+}
+
+.page-contact-zglos-nieruchomosc {
+    #contact-site-form {
+        .form-item {
+            width: 48%;
+            label {
+                font-weight: 300;
+                display: block;
+            }
+            input, textarea {
+                line-height: 2em;
+                padding: 5px;
+                display: block;
+                border-radius: 0px;
+                width: 100%;
+                border: 1px solid $light-border;
+            }
+            &:first-of-type {
+                float: right;
+                padding:0 30px;
+            }            
+        }
+        .form-item-copy {
+            line-height: 2em;
+                input {
+                    width: auto;
+                    float: left;
+                    height: 1em;
+                }
+            }
+            .form-actions {
+                padding: 10px;
+                background-color: $red;
+                width: 190px;
+                input {
+                    display: inline;
+                    background-color: $red;
+                    border: none;
+                    color: white;
+                    
+                    text-transform:uppercase;
+                }
+                &:after {
+                        display: inline-block;
+                        content:"\f061";
+                        font-family: "fontawesome";
+                        width: 10px;
+                        padding-left: 20px;
+                        height:inherit;
+                        background-color: $red;
+                        color: white;
+                    }
+            }
+            .form-required {
+                color: $gray-text;
+            }
+    }
+}
+
+.filebrowser-file-list{
+    tbody {
+        tr {
+            td {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@import 'mediaquerries';
+
+// lightbox - swipebox formatting
+#swipebox-overlay {
+    background-color: rgba(0,0,0,0.8)!important;
+}
+

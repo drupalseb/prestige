@@ -1,0 +1,183 @@
+.search-bar {   
+    padding-left: 30px;
+    input, textarea, select {
+       display: block;
+       width: 100%;
+       height: 30px;
+       padding: 5px; 
+       background-color: #fff;
+       border: 1px solid;
+       border-color: lighten($gray-border, 15%);     
+       -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+       transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        &:active, &:focus, &:hover {
+                 border-color: $gray-border;
+                 box-shadow:none;//inset 0 1px 1px rgba(255, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+                 -webkit-box-shadow:none!important;
+                 -moz-box-shadow:none;
+                 outline: none!important; // to odpowaida za wściekły niebieski kolor przy kliknięciu pola input!!!!
+             }
+    }
+    .views-exposed-form, .views-exposed-widget { // wyszukiwarka z czerownym przyciskiem
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        float: none!important;
+        .views-submit-button {
+            width: 100%;
+            input.form-submit {
+                color: $white;
+                background-color: $red;
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+                margin: 12px 0 15px 0;                        
+            }           
+        }
+    }
+   .block-facetapi {   // blok z fasetami na stronie oferty
+       position: relative;
+       z-index: 4;
+         select {                   
+             cursor: pointer;
+             option {
+                 text-transform: capitalize;
+             }
+        }    
+        .form-type-select {
+             &:after {
+                font-family: "fontawesome";
+                content: "\f078";
+                padding-top: 0.5em;
+                width: 20px;
+                margin: 1px;
+                height: 2.4em;
+                background-color:$white;
+                display: block;
+                position: absolute;
+                z-index: 6;
+                top: 0;
+                right: 0;
+                pointer-events: none;
+            }
+        }
+   }
+   .search-api-ranges-widget {
+       position: relative;
+       p.text-range {
+           display: none;
+       }
+       .form-item {
+           label {
+               display: none;
+           }
+       }
+       .range-box-left {
+           width: 45%;
+           float: left;
+           position: relative;
+           margin-bottom: 30px;
+       }
+       .range-box-right {
+           width: 45%;
+           float: right;
+            position: relative;
+       }
+       .range-slider-box {
+           position: absolute;
+           top: 60px;
+           width: 100%;
+           .ui-widget-header {
+           background-color: $white;
+           background-image: none!important;
+           }
+       }
+   }
+    .block-current-search {
+        h2 {
+            font-size: 1.2em;
+        }
+        .check-facet {
+            margin: 10px 0;
+            li {
+                padding: 5px 0;
+            }
+        }
+        a.clearfilter {
+            padding-right: 5px;
+            color:$red;
+            font-weight: 600;
+        }
+    }
+    
+    //static info block formatting
+    //#block-block-3 - blok kontaktowy
+    //#block-block-4 - blok facebook
+    //#block-block-5 - blok telefon
+    #block-block-3 { //blok kontaktowy
+        margin: 15px 0 ;
+        
+        line-height: 2.5em;
+        h5 {
+            padding-top: 25px;
+        }
+    }
+    #block-block-4 {// blok facebook
+        line-height: 2em;
+        border-bottom: 1px solid $light-border;
+        padding: 7px 0 15px 0;
+        margin-bottom: 30px;
+        p {
+            a {
+                font-size:1.2em;
+                border-left: 1px solid $gray-text;
+                padding-left: 12px;
+                margin-left: 37px;
+                position: relative;
+                &:before {
+                    display: inline-block;
+                    font-family: "fontawesome";
+                    content: "\f09a";
+                    position: absolute;
+                    left: -37px;
+                    border: 1px solid $gray-text;
+                    font-size: 1.2em;
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 25px;
+                    text-align: center;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+    #block-block-5 { //blok telefon
+        p{
+            padding: 20px 0 5px ;
+            font-size: 1.2em;
+        }
+    }
+    .views-exposed-widget {
+    margin-bottom: 10px;
+    label {
+        display: none;
+    }
+    .views-widget {
+        margin-bottom: 10px;
+        select {
+            padding-left: 40px;
+        }
+        input{
+            &::-moz-placeholder {
+                padding: 0;
+                margin: 0;
+            }
+            &::-webkit-input-placeholder{
+                 padding: 0;
+               margin: 0;          
+            }
+        }
+    }
+}
+}
